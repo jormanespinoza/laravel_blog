@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'], function(){
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 	
 	Route::resource('users','UsersController');
 	Route::get('users/{id}/destroy', [
@@ -30,3 +30,7 @@ Route::group(['prefix' => 'admin'], function(){
 	]);
 
 });
+
+Auth::routes();
+
+Route::get('welcome', 'HomeController@index');

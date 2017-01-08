@@ -2,18 +2,26 @@
 
 @section('title', 'Home') 
 
-<div class="row">
-	<div class="container">
-		@section('content')
-		    <h1>Hola esto es bootstrap</h1>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		    <hr>	
-		    <a href="" class="btn btn-success">Soy un boton de bootstrap</a>
-		@endsection
-	</div>
-</div> 
+@section('content')
+	<div class="jumbotron">
+	  <h1>Laravel Blog</h1>
+	  <p>Versión 5.3</p>
+	  <p><a class="btn btn-primary btn-lg" href="#info" role="button">Información</a></p>
+	</div>    
+    <p id="info">Proyecto de prueba generado por Jorman Espinoza, Desarrollador Web, ubicado en Caracas, Venezuela.</p>
+    <p>El proyecto simula o emula el funcionamiento de un blog, con las siguientes funcionalidades:</p>
+    <ul>
+    	<li>Manejo de Usuarios</li>
+    	<li>Manejo de Categorías</li>
+    	<li>Manejo de Artículos</li>
+    	<li>Manejo de Etiquetas</li>
+    	<li>Manejo de Imágenes</li>
+    </ul>
+     <p>Proyecto Realizado conn el Framework Laravel Versión 5.3</p>
+    <ul>
+    <hr>	
+    <div class="form-group text-center">
+    	<a href="{{ url('/login') }}" class="btn btn-primary">Acceder</a>
+    	<a href="{{ url('/register') }}" class="btn btn-success">Registrarse</a>
+    </div>
+@endsection
