@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Laravel Blog | @yield('title', 'Home')</title>
-	<link rel="stylesheet" href=" {{ asset('plugins/bootstrap/css/bootstrap.css') }}">
+	<link rel="stylesheet" href=" {{ asset('plugins/bootstrap/css/bootstrap.css') }}">	
 </head>
 <body>
 	<div class="container">	

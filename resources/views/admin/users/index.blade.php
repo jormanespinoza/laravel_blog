@@ -3,8 +3,17 @@
 @section('title', 'Lista de usuarios')
 
 @section('content')
+	<div class="form-group">
+		<a href="{{ route('users.create') }}" class="btn btn-primary">Registrar nuevo usuario</a>
 
-	<a href="{{ route('users.create') }}" class="btn btn-primary">Registrar nuevo usuario</a><hr>
+		{!! Form::open(['route' => 'users.index', 'method' => 'GET', 'class' => 'navbar-form pull-right']) !!}
+
+		<div class="input-group">
+			{!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Buscar usuario', 'aria-describedby' => 'search']) !!}
+			 <span class="input-group-addon" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>		
+		</div>
+	</div>
+	<hr>
 	<!-- Table -->
 	<table class="table table-striped">
 		<thead>
@@ -28,7 +37,7 @@
 						@endif						
 					</td>
 					<td>
-					<a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning" title="Actualizar"><span class="glyphicon glyphicon-edit"></span></a>
+					<a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
 					<a href="{{ route('admin.users.destroy', $user->id) }}" onclick="return confirm('¿Está seguro de que desea eliminar el usuario?')" class="btn btn-danger" title="Eliminar"><span class="glyphicon glyphicon-remove-sign"></span></a>
 					</td>
 				</tr>

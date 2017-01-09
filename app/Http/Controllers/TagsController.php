@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Http\Requests\UserRequest;
+use App\Tag;
+use App\Http\Requests\TagRequest;
 
-class UsersController extends Controller
+class TagsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index(Request $request)
     {
-        $users = User::search($request->name)->orderBy('id', 'ASC')->paginate(5);
-        return view('admin.users.index')->with('users', $users);        
+        $tags = Tag::search($request->name)->orderBy('id', 'DESC')->paginate(5);
+        return view('admin.tags.index')->with('tags', $tags);
     }
 
     /**
@@ -27,7 +26,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        return view('admin.tags.create');
     }
 
     /**
@@ -36,15 +35,13 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserRequest $request)
-    {        
-        $user = new User($request->all());
-        $user->password = bcrypt($request->password);
-        $user->remember_token = $request['_token'];
-        $user->save();    
+    public function store(TagRequest $request)
+    {
+        $tag = new Tag($request->all());
+        $tag->save();
 
-        flash("Se ha registrado al usuario " . $user->name . " de forma exitosa!", 'success');              
-        return redirect()->route('users.index');
+        flash("La etíqueta " . $tag->name . " se ha generada de forma exitosa!", 'success');              
+        return redirect()->route('tags.index');
     }
 
     /**
@@ -66,8 +63,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        return view('admin.users.edit')->with('user', $user);
+        $tag = tag::find($id);
+        return view('admin.tags.edit')->with('tag', $tag);
     }
 
     /**
@@ -79,12 +76,12 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
-        $user->fill($request->all());
-        $user->save();
+        $tag = Tag::find($id);
+        $tag->fill($request->all());
+        $tag->save();
 
-        flash("El usuario " . $user->name . " ha sido actualizado de forma exitosa!", 'warning');              
-        return redirect()->route('users.index');
+        flash("La etíqueta " . $tag->name . " ha sido actualizada de forma exitosa!", 'warning');              
+        return redirect()->route('tags.index');
     }
 
     /**
@@ -95,10 +92,10 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
-        $user->delete();
+        $tag = Tag::find($id);
+        $tag->delete();
 
-        flash("El usuario " . $user->name . " a sido eliminado de forma exitosa!", 'danger');              
-        return redirect()->route('users.index');
+        flash("La etiqueta " . $tag->name . " ha sido eliminada de forma exitosa!", 'danger');              
+        return redirect()->route('tag.index');
     }
 }
