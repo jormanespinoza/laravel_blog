@@ -4,7 +4,7 @@
 
 @section('content')
 	<div class="jumbotron">
-	  <h1>Laravel Blog</h1>
+	  <h1>Laravel <small>Blog</small></h1>
 	  <p>Versión 5.3</p>
 	  <p><a class="btn btn-primary btn-lg" href="#info" role="button">Información</a></p>
 	</div>    
