@@ -29,5 +29,4 @@
 	    	<a href="{{ url('/register') }}" class="btn btn-success">Registrarse</a>
 	    </div>
     @endif
-
 @endsection

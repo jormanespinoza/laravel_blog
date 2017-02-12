@@ -32,7 +32,7 @@
 					<td>{{ $article->user->name }}</td>					
 					<td>
 						<a href="{{ route('articles.edit', $article->id) }}" class="btn btn-warning" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
-						<a href=" {{ route('admin.articles.destroy', $article->id) }}" onclick="return confirm('¿Está seguro de que desea eliminar la etíquetTa?')" class="btn btn-danger" title="Eliminar"><span class="glyphicon glyphicon-remove-sign"></span></a>
+						<a href=" {{ route('admin.articles.destroy', $article->id) }}" onclick="return confirm('¿Está seguro de que desea eliminar el artículo?')" class="btn btn-danger" title="Eliminar"><span class="glyphicon glyphicon-remove-sign"></span></a>
 					</td>
 				</tr>
 			@endforeach

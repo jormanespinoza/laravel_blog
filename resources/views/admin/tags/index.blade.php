@@ -30,7 +30,7 @@
 					<td>{{ $tag->name }}</td>
 					<td>
 						<a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-warning" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
-						<a href=" {{ route('admin.tags.destroy', $tag->id) }}" onclick="return confirm('¿Está seguro de que desea eliminar la etíquetTa?')" class="btn btn-danger" title="Eliminar"><span class="glyphicon glyphicon-remove-sign"></span></a>
+						<a href=" {{ route('admin.tags.destroy', $tag->id) }}" onclick="return confirm('¿Está seguro de que desea eliminar la etiqueta?')" class="btn btn-danger" title="Eliminar"><span class="glyphicon glyphicon-remove-sign"></span></a>
 					</td>
 				</tr>
 			@endforeach

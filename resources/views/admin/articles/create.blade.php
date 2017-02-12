@@ -33,7 +33,6 @@
 			{!! Form::submit('Generar Artículo', ['class' => 'btn btn-primary']) !!}
 		</div>
 	{!! Form::close() !!}
-	
 @endsection
 
 @section('js')
@@ -51,13 +50,12 @@
 		});
 		// textarea
 		$('.textarea-content').trumbowyg({
-    	lang: 'es',
+    	lang: 'es'
 		});
 		// file upload
 		$(".file-upload").fileinput({
 			'showUpload':false, 
 			'previewFileType':'any'
 		});
-
 	</script>
 @endsection

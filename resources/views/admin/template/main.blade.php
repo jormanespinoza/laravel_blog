@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Laravel Blog | @yield('title', 'Home')</title>
@@ -8,8 +9,8 @@
 	<link rel="stylesheet" href=" {{ asset('plugins/chosen/chosen.css') }}">	
 	<link rel="stylesheet" href=" {{ asset('plugins/trumbowyg/ui/trumbowyg.css') }}">	
 	<link rel="stylesheet" href=" {{ asset('plugins/bootstrap-fileinput/css/fileinput.min.css') }}">
-	
 </head>
+
 <body>
 	<div class="container">	
 		<!-- Add the navbar -->		
