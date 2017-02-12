@@ -22,7 +22,7 @@
                     <li><a href="{{ route('categories.index') }}">Categorías</a></li>
                     <li><a href="{{ route('articles.index') }}">Artículos</a></li>
                     <li><a href="{{ route('admin.images.index') }}">Imágenes</a></li>
-                    <li><a href="{{ route('tags.index') }}">Tags</a></li> 
+                    <li><a href="{{ route('tags.index') }}">Etiquetas</a></li>
                 @endif      
             </ul>  
             <ul class="nav navbar-nav navbar-right"> 
