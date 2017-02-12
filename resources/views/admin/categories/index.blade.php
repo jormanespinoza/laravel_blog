@@ -1,6 +1,6 @@
 @extends('admin.template.main')
 
-@section('title', 'Listado de CategorÍas')
+@section('title', 'Listado de Categorías')
 
 @section('content')
 	<div class="form-group">
