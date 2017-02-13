@@ -11,13 +11,18 @@
 |
 */
 
-Route::get('/', ['as' => 'front.index', function () {
-	return view('front.index');
-}]);
+// Frond End Routes
+
+Route::get('/', [
+	'uses' => 'FrontController@index',
+	'as' => 'front.index'
+]);
+
+// Admin Routes
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 	
-	Route::get('/', ['as' => 'admin.index', function () {
+	Route::get('/', ['as' => 'admin.index', function() {
 		return view('admin.index');
 	}]);
 
@@ -53,5 +58,3 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 });
 
 Auth::routes();
-
-Route::get('welcome', 'HomeController@index');

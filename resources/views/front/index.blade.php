@@ -9,19 +9,35 @@
 	<div class="row">
 		<div class="col-md-8">
 			<div class="row">
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-body">
-
+				@foreach($articles as $article)
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<a href="" class="thumbnail">
+									@foreach($article->images as $image)
+										<img src="{{ asset('images/articles/'. $image->name) }}"  class="img-responsive" alt="Imagen del Artículo {{ $article->title }}">
+									@endforeach
+								</a>
+								<h4 class="text-center">{{ $article->title }}</h4>
+								<hr>
+								<i class="fa fa-folder-open-o"></i> <a href="">{{ $article->category->name }}</a>
+								<div class="pull-right">Hace 3 minutos</div>
+							</div>
 						</div>
 					</div>
-				</div>
+				@endforeach
 			</div>
+
 		</div>
 
 		<div class="col-md-4">
 			@include('front.partials.aside')
 		</div>
+	</div>
+
+	<!-- Create the pagination-->
+	<div class="text-left">
+		{!! $articles->render() !!}
 	</div>
 
 	@if (Auth::guest())
