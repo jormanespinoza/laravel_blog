@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav"> 
                 @if (!(Auth::guest()) && (Auth::user()->type == 'admin'))       
-                    <li><a href="{{ url('/') }}">Inicio</a></li>        
+                    <li><a href="{{ route('admin.index') }}">Inicio</a></li>
                     <li><a href="{{ route('users.index') }}">Usuarios</a></li>
                     <li><a href="{{ route('categories.index') }}">Categorías</a></li>
                     <li><a href="{{ route('articles.index') }}">Artículos</a></li>

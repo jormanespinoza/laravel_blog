@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>@yield('title', 'Home') | Blog</title>
+	<link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png"/>
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/paper/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/general.css') }}">
 	<link rel="stylesheet" href="{{ asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}">

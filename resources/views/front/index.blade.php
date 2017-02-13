@@ -17,8 +17,8 @@
 									@foreach($article->images as $image)
 										<img src="{{ asset('images/articles/'. $image->name) }}"  class="img-responsive" alt="Imagen del Artículo {{ $article->title }}">
 									@endforeach
+									<h4 class="text-center">{{ $article->title }}</h4>
 								</a>
-								<h4 class="text-center">{{ $article->title }}</h4>
 								<hr>
 								<i class="fa fa-folder-open-o"></i> <a href="">{{ $article->category->name }}</a>
 								<div class="pull-right">Hace 3 minutos</div>
@@ -39,12 +39,4 @@
 	<div class="text-left">
 		{!! $articles->render() !!}
 	</div>
-
-	@if (Auth::guest())
-		<hr>
-		<div class="form-group text-center">
-			<a href="{{ url('/login') }}" class="btn btn-primary">Acceder</a>
-			<a href="{{ url('/register') }}" class="btn btn-success">Registrarse</a>
-		</div>
-	@endif
 @endsection
