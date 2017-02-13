@@ -40,5 +40,4 @@
 	<div class="text-center">
 		{!! $tags->render() !!}	
 	</div>
-	
 @endsection

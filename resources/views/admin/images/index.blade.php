@@ -15,4 +15,8 @@
 			</div>
 		@endforeach
 	</div>
+	<!-- Create the pagination-->
+	<div class="text-center">
+		{!! $images->render() !!}
+	</div>
 @endsection

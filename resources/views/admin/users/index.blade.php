@@ -33,7 +33,7 @@
 						@if($user->type == 'admin')
 							<span class="label label-danger">{{ $user->type }}</span>
 						@else
-							<span class="label label-info">{{ $user->type }}</span>
+							<span class="label label-primary">{{ $user->type }}</span>
 						@endif						
 					</td>
 					<td>
