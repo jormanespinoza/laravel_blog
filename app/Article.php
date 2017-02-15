@@ -51,4 +51,13 @@ class Article extends Model
     public function scopeSearch($query, $title) {
         return $query->where('title', 'LIKE', '%'.$title.'%' );
     }
+
+		public static function findBySlugOrFail($slug, $columns = array('*') )
+    {
+        if (!is_null($slug = static::whereSlug($slug)->first($columns))) {
+            return $slug;
+        }
+
+        throw new ModelNotFoundException;
+    }
 }

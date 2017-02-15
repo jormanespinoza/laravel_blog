@@ -28,6 +28,11 @@ Route::get('tags/{name}', [
 	'as' => 'front.search.tag'
 ]);
 
+Route::get('articles/{slug}', [
+	'uses' => 'FrontController@viewArticle',
+	'as' => 'front.view.article'
+]);
+
 // Admin Routes
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){

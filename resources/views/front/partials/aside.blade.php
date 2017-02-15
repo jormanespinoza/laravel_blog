@@ -5,12 +5,10 @@
 		</div>
 
 		<div class="panel-body">
-
 			<div class="form-group text-center">
 				<a href="{{ url('/login') }}" class="btn btn-primary">Acceder</a>
 				<a href="{{ url('/register') }}" class="btn btn-success">Registrarse</a>
 			</div>
-
 		</div>
 	</div>
 @endif
