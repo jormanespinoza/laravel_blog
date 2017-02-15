@@ -15,13 +15,15 @@
 							<div class="panel-body">
 								<a href="" class="thumbnail">
 									@foreach($article->images as $image)
-										<img src="{{ asset('images/articles/'. $image->name) }}"  class="img-responsive" alt="Imagen del Artículo {{ $article->title }}">
+										<img src="{{ asset('images/articles/'. $image->name) }}" class="img-responsive" alt="Imagen del Artículo {{ $article->title }}">
 									@endforeach
-									<h4 class="text-center">{{ $article->title }}</h4>
 								</a>
+								<h4 class="text-center">{{ $article->title }}</h4>
 								<hr>
 								<i class="fa fa-folder-open-o"></i> <a href="">{{ $article->category->name }}</a>
-								<div class="pull-right">Hace 3 minutos</div>
+								<div class="pull-right">
+									<i class="fa fa-clock-o"></i> {{ $article->created_at->diffForHumans() }}
+								</div>
 							</div>
 						</div>
 					</div>

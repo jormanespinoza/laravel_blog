@@ -1,17 +1,20 @@
-<div class="panel panel-primary">
-	<div class="panel-heading">
-		<h3 class="panel-title">Opciones de Usuario</h3>
-	</div>
-
-	<div class="panel-body">
-		@if (Auth::guest())
-		<div class="form-group text-center">
-			<a href="{{ url('/login') }}" class="btn btn-primary">Acceder</a>
-			<a href="{{ url('/register') }}" class="btn btn-success">Registrarse</a>
+@if (Auth::guest())
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Opciones de Usuario</h3>
 		</div>
-	@endif
+
+		<div class="panel-body">
+
+			<div class="form-group text-center">
+				<a href="{{ url('/login') }}" class="btn btn-primary">Acceder</a>
+				<a href="{{ url('/register') }}" class="btn btn-success">Registrarse</a>
+			</div>
+
+		</div>
 	</div>
-</div>
+@endif
+
 <div class="panel panel-primary">
 	<div class="panel-heading">
 		<h3 class="panel-title">Categorías</h3>
