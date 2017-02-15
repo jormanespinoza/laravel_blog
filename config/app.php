@@ -177,6 +177,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+				App\Providers\ComposerServiceProvider::class,
 
          /*
         *   Personal Providers
@@ -184,7 +185,7 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,                
+        Laracasts\Flash\FlashServiceProvider::class
 
     ],
 
@@ -240,7 +241,7 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Flash' => Laracasts\Flash\Flash::class,          
+        'Flash' => Laracasts\Flash\Flash::class
 
     ],
 
