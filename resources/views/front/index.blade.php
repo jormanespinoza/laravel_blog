@@ -14,7 +14,7 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
 								@foreach($article->images as $image)
-									<img src="{{ asset('images/articles/'. $image->name) }}" class="img-article" alt="Imagen del Artículo {{ $article->title }}">
+									<img src="{{ asset('images/articles/'. $image->name) }}" class="img-responsive" alt="Imagen del Artículo {{ $article->title }}">
 								@endforeach
 								<a href="{{ route('front.view.article', $article->slug) }}">
 									<h4 class="text-center">{{ $article->title }}</h4>

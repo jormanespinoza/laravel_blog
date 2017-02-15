@@ -16,9 +16,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav"> 
-                @if (!(Auth::guest()) && (Auth::user()->type == 'admin'))       
+                @if (!(Auth::guest()))
                     <li><a href="{{ route('admin.index') }}">Inicio</a></li>
-                    <li><a href="{{ route('users.index') }}">Usuarios</a></li>
+                    @if (Auth::user()->type == 'admin')
+                    		<li><a href="{{ route('users.index') }}">Usuarios</a></li>
+                    @endif
                     <li><a href="{{ route('categories.index') }}">Categorías</a></li>
                     <li><a href="{{ route('articles.index') }}">Artículos</a></li>
                     <li><a href="{{ route('admin.images.index') }}">Imágenes</a></li>
