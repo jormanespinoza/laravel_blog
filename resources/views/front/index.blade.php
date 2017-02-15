@@ -20,7 +20,7 @@
 								</a>
 								<h4 class="text-center">{{ $article->title }}</h4>
 								<hr>
-								<i class="fa fa-folder-open-o"></i> <a href="">{{ $article->category->name }}</a>
+								<i class="fa fa-folder-open-o"></i> <a href="{{ route('front.search.category', $article->category->name) }}">{{ $article->category->name }}</a>
 								<div class="pull-right">
 									<i class="fa fa-clock-o"></i> {{ $article->created_at->diffForHumans() }}
 								</div>

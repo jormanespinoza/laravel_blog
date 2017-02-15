@@ -10,3 +10,12 @@ body {
 footer {
 	padding: 1%;
 }
+
+a.tag-link {
+	text-decoration: none;
+}
+
+a.logo-link {
+	text-decoration: none;
+	color: #444;
+}
